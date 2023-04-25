@@ -8,71 +8,92 @@ function Navbar() {
         setModal(!modal)
     }
     const location = useLocation().pathname
-    console.log(location)
+    console.log(modal)
     return (
-        <div className=' lg:w-full lg:h-[70px]  lg:bg-[#EFE8DF] lg:flex lg:fixed lg:z-10 lg:top-0'>
-            <GiMoebiusTriangle className=' lg:m-[30px] lg:mt-[22px]  lg:text-[25px]  lg:text-white' />
-            <h1 className=' lg:text-[30px] lg:font-bold lg:mt-[10px] lg:ml-[-25px]  lg:text-white'>YANTRA</h1>
-            <ul className=' lg:ml-[290px] lg:text-white lg:flex lg:mt-[22px]'>
-                {/* <FaBars onClick={toggleModal} className='text-white mr-[50px] mt-[18px] md:hidden lg:hidden ' /> */}
-                <li className='lg:pl-[30px] '>
+        <div className='w-full h-[70px] bg-[#EFE8DF] justify-between  items-center md:w-full md:h-[70px]  flex lg:w-full lg:h-[70px] md:bg-[#EFE8DF]  lg:bg-[#EFE8DF]  lg:fixed lg:z-10 lg:top-0 px-6' >
+            <div className="flex">
+                <GiMoebiusTriangle className=' text-[25px]   lg:text-black' />
+                <h1 className='  lg:text-black'>YANTRA</h1>
+            </div>
+
+            <ul className=' hidden md:flex lg:ml-[290px] md:ml-[130px]  lg:flex  lg:text-black'>
+                <li className='md:mt-[20px] md:ml-[15px] lg:pl-[15px]'>
                     <Link to="/">Home</Link>
-                    {location === "/" ? <hr className='  lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
-                </li>  <li className='lg:pl-[30px] '>
+                    {location === "/" ? <hr className=' md:mt-[8px]  lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                </li>
+                <li className=' md:mt-[20px] md:ml-[15px] lg:pl-[15px] '>
                     <Link to="/about">About</Link>
-                    {location === "/about" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
-                </li>  <li className='lg:pl-[30px] '>
+                    {location === "/about" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                </li>
+                <li className=' md:mt-[20px] md:ml-[15px] lg:pl-[15px]'>
                     <Link to="/menu">Menu</Link>
-                    {location === "/menu" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
+                    {location === "/menu" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
                 </li>
-                <li className='lg:pl-[30px] '>
+                <li className='md:mt-[20px] md:ml-[15px]lg:pl-[15px]'>
                     <Link to="/press">Press</Link>
-                    {location === "/press" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
+                    {location === "/press" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
                 </li>
-                <li className='lg:pl-[30px] '>
+                <li className=' md:mt-[20px] md:ml-[15px] lg:pl-[15px]'>
                     <Link to="/reservations">Reservations</Link>
-                    {location === "/reservations" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
+                    {location === "/reservations" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
                 </li>
-                <li className='lg:pl-[30px] '>
+                <li className=' md:mt-[20px] md:ml-[15px] lg:pl-[15px]'>
                     <Link to="/trunk">The Grand Trunk</Link>
-                    {location === "/trunk" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
+                    {location === "/trunk" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
                 </li>
-                <li className='lg:pl-[30px] '>
+                <li className=' md:mt-[20px] md:ml-[15px] lg:pl-[15px]'>
                     <Link to="/vaucher">e-Vauchers</Link>
-                    {location === "/vaucher" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
+                    {location === "/vaucher" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
                 </li>
-                <li className='lg:pl-[30px]  '>
+                <li className=' md:mt-[20px] md:ml-[15px] lg:pl-[15px]'>
                     <Link to="/contact">Contact Us</Link>
-                    {location === "/contact" ? <hr className=' lg:border-1 lg:border-white lg:mt-[8px]' /> : ""}
+                    {location === "/contact" ? <hr className=' md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
                 </li>
             </ul>
+
+
+
+            <div className={`${modal ? "block" : "hidden"} absolute z-10 top-[70px] right-[0px]  md:hidden lg:hidden w-full h-[300px] bg-[#EFE8DF]`}>
+
+
+                <ul className='bg-[#EFE8DF] text-right pr-[20px] '>
+                    <li className='pt-[10px]'>
+                        <Link to="/">Home</Link>
+                        {location === "/" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px]'>
+                        <Link to="/about">About</Link>
+                        {location === "/about" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px]'>
+                        <Link to="/menu">Menu</Link>
+                        {location === "/menu" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px]'>
+                        <Link to="/press">Press</Link>
+                        {location === "/press" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px] '>
+                        <Link to="/reservations">Reservations</Link>
+                        {location === "/reservations" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px] '>
+                        <Link to="/trunk">The Grand Trunk</Link>
+                        {location === "/trunk" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px] '>
+                        <Link to="/vaucher">e-Vauchers</Link>
+                        {location === "/vaucher" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                    <li className='pt-[10px] '>
+                        <Link to="/contact">Contact Us</Link>
+                        {location === "/contact" ? <hr className='md:border-1 md:border-black md:mt-[8px] lg:border-1 lg:border-black lg:mt-[8px]' /> : ""}
+                    </li>
+                </ul>
+            </div>
+            <FaBars onClick={toggleModal} className=' text-[20px] text-black md:hidden lg:hidden  ' />
         </div>
-        //     {
-        //     modal && (
-        //         <div className='md:hidden lg:hidden w-[399px] h-[260px] bg-[#34AD54]'>
-        //             <ul className=' w-full h-[260px] pt-[60px] '>
-        //                 <li className=' w-full h-[50px] pl-[10px]  pt-[10px] bg-[#FF9933] text-[white]  '>
-        //                     <a href="#">Home</a>
-        //                 </li>
-        //                 <li className=' pl-[10px]  pt-[10px] text-[white]'>
-        //                     <a href="#">About</a>
-        //                 </li>
-        //                 <li className=' pl-[10px]  pt-[10px] text-[white]'>
-        //                     <a href="#">Services</a>
-        //                 </li>
-        //                 <li className=' pl-[10px]  pt-[10px] text-[white]'>
-        //                     <a href="#">Product</a>
-        //                 </li>
 
-        //                 <li className=' pl-[10px]  pt-[10px] text-[white]'>
-        //                     <a href="#">Contact</a>
-        //                 </li>
-        //             </ul>
-
-        //         </div>
-
-        //     )
-        // }
     )
 }
 export default Navbar

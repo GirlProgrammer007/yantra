@@ -23,22 +23,22 @@ export default function Slider() {
                 modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper">
                 <SwiperSlide>
-                    <img src={img} alt="" className="lg:w-full lg:h-[600px]" />
+                    <img src={img} alt="" className="w-[390px] h-[300px] md:w-full md:h-[600px] lg:w-full lg:h-[600px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img1} alt="" className="lg:w-full lg:h-[600px]" />
+                    <img src={img1} alt="" className="w-[390px] h-[300px] md:w-full md:h-[600px] lg:w-full lg:h-[600px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img2} alt="" className="lg:w-full lg:h-[600px]" />
+                    <img src={img2} alt="" className="w-[390px] h-[300px] md:w-full md:h-[600px] lg:w-full lg:h-[600px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img3} alt="" className="lg:w-full lg:h-[600px]" />
+                    <img src={img3} alt="" className="w-[390px] h-[300px] md:w-full md:h-[600px] lg:w-full lg:h-[600px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img4} alt="" className="lg:w-full lg:h-[600px]" />
+                    <img src={img4} alt="" className="w-[390px] h-[300px] md:w-full md:h-[600px] lg:w-full lg:h-[600px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={img5} alt="" className="lg:w-full lg:h-[600px]" />
+                    <img src={img5} alt="" className="w-[390px] h-[300px] md:w-full md:h-[600px] lg:w-full lg:h-[600px]" />
                 </SwiperSlide>
             </Swiper>
         </>
